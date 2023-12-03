@@ -52,10 +52,6 @@ def sum_calibration_values(pattern):
     with open('./day1/input') as advent_problem_input:
         lines = advent_problem_input.read().split('\n')
     calibration_numbers = list(map(lambda x: get_calibration_digit(x, pattern), lines))
-    import pandas as pd
-    df = pd.DataFrame(list(zip(lines, calibration_numbers)),
-               columns =['line', 'calibration'])
-    df.to_csv("check.csv")
     return reduce(lambda a, b: a + b, calibration_numbers)
 
 ############### TEST CASES ################        
