@@ -2,21 +2,6 @@ import numpy as np
 import re
 from io import StringIO
 
-symbol_pattern = re.compile('[^a-zA-Z\d\s:\.]')
-
-def _num_has_adjacent_num(engine: np.array, engine_side: int, i: int, min_j: int, max_j: int) -> bool:
-
-    i_minus_1 = i if i - 1 < 0 else i - 1
-    i_plus_2 = i + 1 if i + 2 > engine_side else i + 2
-    j_minus_1 = min_j if min_j - 1 < 0 else min_j - 1
-    j_plus_1 = max_j + 1 if max_j + 2 > engine_side else max_j + 2
-
-    digit_plus_adjacent = engine[i_minus_1:i_plus_2]
-    for row in digit_plus_adjacent:
-        if symbol_pattern.search(row[j_minus_1:j_plus_1]) :
-            return True
-    return False
-
 def num_has_adjacent_num(engine: np.array, engine_side: int, i: int, min_j: int, max_j: int) -> bool:
 
     gears_coordinates = None
