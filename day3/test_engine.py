@@ -54,8 +54,10 @@ def sum_engine_schematic(engine: np.array):
                 max_j = j - 1
                 in_digit = False
                 digits_int = int(digits)
-                if num_has_adjacent_num(engine, engine_side, i, min_j, max_j):
+                is_adjacent, gear_coordinates = num_has_adjacent_num(engine, engine_side, i, min_j, max_j)
+                if is_adjacent:
                     engine_schematic_sum += digits_int
+                    print(digits, file=f)
                 digits = ''
     f.close()
     return engine_schematic_sum
