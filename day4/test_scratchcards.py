@@ -98,4 +98,4 @@ def test_total_score_single_copies_out_of_range2():
     assert 32 == total_score_single_copies(np.asarray([4, 2, 2, 1, 0, 1, 0]))
 
 def test_score_scratchcards_star2():
-    assert 0 == problem_solution_start_2()
+    assert 5329815 == problem_solution_start_2()
