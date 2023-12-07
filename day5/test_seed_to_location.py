@@ -50,7 +50,7 @@ def expand_seeds(input_seeds) -> list:
 def get_expanded_lowest_location(input) -> int:
     return get_lowest_location(input, expand_seeds)
 
-############## Efficient second solution #############
+############## Efficient solution to second problem #############
 
 def expand_seeds_ranges(input_seeds) -> list:
     expanded_seeds = []
