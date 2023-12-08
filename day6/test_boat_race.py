@@ -10,9 +10,6 @@ def race_winning_options(time:int, record_distance:int):
 def race_records_options(races: list):
     return reduce(lambda a, b: a * b, map(lambda x: len(race_winning_options(x[0], x[1])), races))
 
-61677571
-430103613071150
-
 ############### TEST CASES ################        
 
 def test_race_combination_case1():
